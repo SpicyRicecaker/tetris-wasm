@@ -1,0 +1,13 @@
+.DS_Store
+node_modules
+public/bundle.*
+package-lock.json
+yarn.lock
+
+/target
+/pkg
+
+/public/build
+/public/*.wasm
+/public/*.js
+/web-ext-artifacts

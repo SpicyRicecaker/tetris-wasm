@@ -1,0 +1,35 @@
+{
+  "name": "hometown",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@tsconfig/svelte": "^1.0.10",
+    "@types/node": "^14.14.35",
+    "@wasm-tool/wasm-pack-plugin": "^1.3.3",
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.0",
+    "mini-css-extract-plugin": "^1.3.9",
+    "postcss-load-config": "^3.0.1",
+    "postcss-scss": "^3.0.5",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.32.8",
+    "svelte": "^3.35.0",
+    "svelte-check": "^1.3.0",
+    "svelte-loader": "^3.0.0",
+    "svelte-preprocess": "^4.6.9",
+    "swc-loader": "^0.1.12",
+    "tslib": "^2.1.0",
+    "typescript": "^4.2.3",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "build": "rimraf dist pkg && cross-env NODE_ENV=production webpack",
+    "dev": "rimraf dist pkg && webpack serve --content-base public",
+    "validate": "svelte-check",
+    "test": "cargo test && wasm-pack test --headless"
+  }
+}
