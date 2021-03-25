@@ -1,8 +1,9 @@
 <script>
-  let name:string = "123";
+  import('../pkg').then(rust => {
+    console.log(rust.Grid.new());
+  });
+  
 </script>
-
-hello world, {name}
 
 <style lang="scss">
   :global(html) {
