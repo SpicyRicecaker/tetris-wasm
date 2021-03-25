@@ -1,8 +1,30 @@
 <script>
-  import('../pkg').then(rust => {
-    console.log(rust.Grid.new());
+  import { onMount } from 'svelte';
+
+  const game = {
+    running: false,
+  };
+
+  onMount(async () => {
+    const rust = await import('../pkg');
+
+    const render = () => {
+      
+    };
+
+    const tick = () => {};
+
+    const main = () => {
+      // render
+      render();
+      // tick
+      tick();
+      window.requestAnimationFrame(main);
+    };
+
+    game.running = true;
+    window.requestAnimationFrame(main);
   });
-  
 </script>
 
 <style lang="scss">
